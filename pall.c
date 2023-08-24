@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * pall - prints all the elements of the stack.
+ * pall -function to  print all the elements of the stack.
  * @head: A pointer to stack.
  * @num: The line number.
  */
