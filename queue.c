@@ -9,7 +9,7 @@ void f_queue(stack_t **head, unsigned int num)
 {
 	(void)head;
 	(void)num;
-	j.lifi = 1;
+	a.lifi = 1;
 }
 /**
  * addqueue - A function that sets the format of the data to a queue (FIFO).
