@@ -1,40 +1,48 @@
 #include "monty.h"
+j_t j = {NULL, NULL, NULL, 0};
+
 /**
- * f_div - Divides the top two elements of the stack.
- * @head: A pointer to the head stack.
- * @num: The line number.
+ * main - entry point of program
+ * @argc: Number of arguments
+ * @argv: Argument vector
  * Return: 0
  */
-void f_div(stack_t **head, unsigned int num)
-{
-	stack_t *h;
-	int len = 0, aux;
 
-	h = *head;
-	while (h)
+int main(int argc, char *argv[])
+{
+	char *content;
+	size_t size = 0;
+	ssize_t read_line = 0;
+	stack_t *stack = NULL;
+	unsigned int num = 0;
+	FILE *file;
+
+	if (argc != 2)
 	{
-		h = h->next;
-		len++;
-	}
-	if (len < 2)
-	{
-		fprintf(stderr, "L%d: can't div, stack too short\n", num);
-		fclose(j.file);
-		free(j.content);
-		free_stack(*head);
+		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	h = *head;
-	if (h->n == 0)
+
+	file = fopen(argv[1], "r");
+	j.file = file;
+
+	if (!file)
 	{
-		fprintf(stderr, "L%d: division by zero\n", num);
-		fclose(j.file);
-		free(j.content);
-		free_stack(*head);
+		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	aux = h->next->n / h->n;
-	h->next->n = aux;
-	*head = h->next;
-	free(h);
+	while ((read_line = getline(&content, &size, file)) != -1)
+	{
+		j.content = content;
+		num++;
+
+		if (read_line > 0)
+		{
+			execute(content, &stack, num, file);
+		}
+	}
+	free(content);
+	free_stack(stack);
+	fclose(file);
+	return (0);
 }
