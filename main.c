@@ -2,7 +2,7 @@
 j_t j = {NULL, NULL, NULL, 0};
 
 /**
- * main - entry point of program
+ * main - The main function entry point
  * @argc: Number of arguments
  * @argv: Argument vector
  * Return: 0
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	while (fgets(content, size, file) != NULL)
+	while ((read_line = getline(&content, &size, file)) != -1)
 	{
 		j.content = content;
 		num++;
