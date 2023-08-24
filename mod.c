@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * mod - A function that computes the rest of the division of the second
+ * mod - This computes the rest of the division of the second
  * top element of the stack by the top element of the stack.
- * @head: A pointer to the head of the stack.
+ * @head: A pointer to the head stack.
  * @num: The line number.
  * Return: 0
  */

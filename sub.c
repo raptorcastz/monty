@@ -1,8 +1,7 @@
 #include "monty.h"
 /**
- * sub - A function that subtracts the top element of the stack
- * from the second top element of the stack.
- * @head: A pointer to the stack.
+ * sub - subtracts the top element of the stack from the second top element of the stack.
+ * @head: A pointer to stack.
  * @num: The line number.
  */
 void sub(stack_t **head, unsigned int num)

@@ -1,8 +1,7 @@
 #include "monty.h"
 /**
- * pchar - A function that prints the char at the top of the stack,
- * followed by a new line.
- * @head: A pointer to the stack.
+ * pchar -prints the char at the top of the stack, followed by a new line.
+ * @head: A pointer to stack.
  * @num: The line number.
  */
 void pchar(stack_t **head, unsigned int num)

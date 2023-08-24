@@ -1,7 +1,7 @@
 #include "monty.h"
 /**
- * stacck - A function that sets the format of the data to a stack (LIFO).
- * @head: A pointer to the stack.
+ * stacck - sets the format of the data to a stack (LIFO).
+ * @head: A pointer to stack.
  * @num: The line number.
  */
 void stacck(stack_t **head, unsigned int num)

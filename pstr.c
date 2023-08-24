@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * pstr - A function that prints the string starting at the top of the stack,
+ * pstr - prints the string starting at the top of the stack,
  * followed by a new line.
- * @head: A pointer to the stack.
+ * @head: A pointer to stack.
  * @num: The line number.
  */
 void pstr(stack_t **head, unsigned int num)

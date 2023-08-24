@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * add - A function that adds the top two elements of the stack.
- * @head: A pointer to the head of the stack.
- * @num: The line number.
+ * add -this adds the top two elements of the stack.
+ * @head: pointer to head stack.
+ * @num: The line no.
  * Return: 0
  */
 void add(stack_t **head, unsigned int num)

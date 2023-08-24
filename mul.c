@@ -1,7 +1,7 @@
 #include "monty.h"
 /**
- * mul - A function that multiplies the top two elements of the stack.
- * @head: A pointer to the head of the stack.
+ * mul -multiplies the top two elements of the stack.
+ * @head: A pointer to the head stack.
  * @num: The line number.
  * Return: 0
  */

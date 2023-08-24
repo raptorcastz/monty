@@ -1,20 +1,20 @@
 #include "monty.h"
 /**
- * push - A function that pushes a new node onto the stack.
- * @head: A pointer to the stack.
+ * push -pushes a new node onto the stack.
+ * @head: A pointer to stack.
  * @num: The line number.
  */
 void push(stack_t **head, unsigned int num)
 {
-	int n, k = 0, flag = 0;
+	int a, b = 0, flag = 0;
 
 	if (j.arg)
 	{
 		if (j.arg[0] == '-')
-			k++;
-		for (; j.arg[k] != '\0'; k++)
+			b++;
+		for (; j.arg[b] != '\0'; b++)
 		{
-			if (j.arg[k] > 57 || j.arg[k] < 48)
+			if (j.arg[b] > 57 || j.arg[b] < 48)
 				flag = 1;
 		}
 		if (flag == 1)
@@ -34,9 +34,9 @@ void push(stack_t **head, unsigned int num)
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	n = atoi(j.arg);
+	a = atoi(j.arg);
 	if (j.lifi == 0)
-		addnode(head, n);
+		addnode(head, a);
 	else
-		addqueue(head, n);
+		addqueue(head, a);
 }
