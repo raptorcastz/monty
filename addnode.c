@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * addnode - adds a new node at the beginning of a stack.
+ * addnode - +s new node at the beginning of a stack.
  * @head: pointer to head of stack.
  * @n: value to be added to new node.
  * Return: 0
