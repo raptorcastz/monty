@@ -11,8 +11,8 @@ void pop(stack_t **head, unsigned int num)
 	if (*head == NULL)
 	{
 		fprintf(stderr, "L%d: can't pop an empty stack\n", num);
-		fclose(j.file);
-		free(j.content);
+		fclose(a.file);
+		free(a.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}

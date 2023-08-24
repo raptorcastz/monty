@@ -32,14 +32,14 @@ struct stack_s *next;
  * @lifi: flag change stack <-> queue
  * Description: carries values through the program
  */
-typedef struct j_s
+typedef struct a_s
 {
 	char *arg;
 	FILE *file;
 	char *content;
 	int lifi;
-} j_t;
-extern j_t j;
+} a_c;
+extern a_c a;
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode

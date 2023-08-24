@@ -8,5 +8,5 @@ void stacck(stack_t **head, unsigned int num)
 {
 	(void)head;
 	(void)num;
-	j.lifi = 0;
+	a.lifi = 0;
 }

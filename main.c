@@ -1,5 +1,5 @@
 #include "monty.h"
-j_t j = {NULL, NULL, NULL, 0};
+a_c a = {NULL, NULL, NULL, 0};
 
 /**
  * main - The main function entry point
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	}
 
 	file = fopen(argv[1], "r");
-	j.file = file;
+	a.file = file;
 
 	if (!file)
 	{
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 	}
 	while ((read_line = getline(&content, &size, file)) != -1)
 	{
-		j.content = content;
+		a.content = content;
 		num++;
 
 		if (read_line > 0)

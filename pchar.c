@@ -12,16 +12,16 @@ void pchar(stack_t **head, unsigned int num)
 	if (!h)
 	{
 		fprintf(stderr, "L%d: can't pchar, stack empty\n", num);
-		fclose(j.file);
-		free(j.content);
+		fclose(a.file);
+		free(a.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
 	if (h->n > 127 || h->n < 0)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", num);
-		fclose(j.file);
-		free(j.content);
+		fclose(a.file);
+		free(a.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}

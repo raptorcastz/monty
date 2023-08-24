@@ -6,22 +6,22 @@
  */
 void push(stack_t **head, unsigned int num)
 {
-	int a, b = 0, flag = 0;
+	int d, b = 0, flag = 0;
 
-	if (j.arg)
+	if (a.arg)
 	{
-		if (j.arg[0] == '-')
+		if (a.arg[0] == '-')
 			b++;
-		for (; j.arg[b] != '\0'; b++)
+		for (; a.arg[b] != '\0'; b++)
 		{
-			if (j.arg[b] > 57 || j.arg[b] < 48)
+			if (a.arg[b] > 57 || a.arg[b] < 48)
 				flag = 1;
 		}
 		if (flag == 1)
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", num);
-			fclose(j.file);
-			free(j.content);
+			fclose(a.file);
+			free(a.content);
 			free_stack(*head);
 			exit(EXIT_FAILURE);
 		}
@@ -29,14 +29,14 @@ void push(stack_t **head, unsigned int num)
 	else
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", num);
-		fclose(j.file);
-		free(j.content);
+		fclose(a.file);
+		free(a.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	a = atoi(j.arg);
-	if (j.lifi == 0)
-		addnode(head, a);
+	d = atoi(a.arg);
+	if (a.lifi == 0)
+		addnode(head, d);
 	else
-		addqueue(head, a);
+		addqueue(head, d);
 }

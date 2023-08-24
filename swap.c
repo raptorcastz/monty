@@ -13,8 +13,8 @@ void swap(stack_t **head, unsigned int num)
 	if (!h || !h->next)
 	{
 		fprintf(stderr, "L%d: can't swap, stack too short\n", num);
-		fclose(j.file);
-		free(j.content);
+		fclose(a.file);
+		free(a.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}

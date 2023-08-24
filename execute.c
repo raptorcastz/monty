@@ -23,7 +23,7 @@ int execute(char *content, stack_t **stack, unsigned int num, FILE *file)
 	op = strtok(content, " \n\t");
 	if (op && op[0] == '#')
 		return (0);
-	j.arg = strtok(NULL, " \n\t");
+	a.arg = strtok(NULL, " \n\t");
 	while (opst[i].opcode && op)
 	{
 		if (strcmp(op, opst[i].opcode) == 0)
@@ -37,7 +37,7 @@ int execute(char *content, stack_t **stack, unsigned int num, FILE *file)
 	{
 		fprintf(stderr, "L%d:unknown instruction %s\n", num, op);
 		fclose(file);
-		free(j.content);
+		free(a.content);
 		free_stack(*stack);
 		exit(EXIT_FAILURE);
 	}
