@@ -10,7 +10,8 @@
 #define _GNU_SOURCE
 
 /**
- * struct stack_s - a function with a doubly linked list representation of a stack / queue
+ * struct stack_s - a function with a doubly linked
+ *list representation of a stack / queue
  * @n: integer
  * @prev: points to the previous element of the stack /queue
  * @next: points to the next element of the stack / queue
